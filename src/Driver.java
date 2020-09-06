@@ -2,27 +2,29 @@ public class Driver
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World");
-		
+		//create variables
 		String aString = "Galations";
-		System.out.println(aString);
-		String Vowels = "AEIOUaeiou";
-		System.out.println(Vowels);
-		
-		for(int i = aString.length(); i >= 0; i++)
+		String vowels = "AEIOUaeiou";
+		int count = 0;
+		int stringLength = aString.length();
+		int vowelStringLength = vowels.length();
+
+		for(int i = 0; i <= stringLength-1; i++)
 		{
-			
+			for(int a = 0; a <= vowelStringLength-1; a++)
+			{
+				if(aString.charAt(i) == vowels.charAt(a))
+				{
+					count++;
+				}
+			}
 		}
-		
-	}
-	
-	/*
-	String aString1 = "";
-	String aString2 = "";
-	
-	static String compareStrings(String aString1, String aString2)
-	{
-		return aString1;
-	}
-	*/
-}
+		//display initial string
+		System.out.print("The string is: ");
+		System.out.println(aString);
+		//print number of vowels in string to console
+		System.out.print("There are ");
+		System.out.print(count);
+		System.out.print(" vowels in this string.");
+	} //ends main function
+} //ends Driver class
